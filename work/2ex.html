@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Hola Vue</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 
 </head>
 <body>
@@ -17,15 +17,12 @@
                     <span v-show="genero === 'masculino'">Sr. {{nombre}}</span>
                     <span v-if="genero === 'femenino'">Sra. {{nombre}}</span>
                 </hi>
-
             </div>
             <h1 v-else>No puedes decidir, Pues bien!</h1>
             <label>Enter your gender:</label>
             <input v-model="genero" class="form-control">
             <label>Enter your name:</label>
             <input v-model="nombre" class="form-control" >
-
-
             <pre>
                 {{$data}}
             </pre>
@@ -34,7 +31,7 @@
 
 </div>
 
-<script src="js/vue.js"></script>
+<script src="../js/vue.js"></script>
 <script>
     new Vue({
         el: '#app',
