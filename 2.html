@@ -11,11 +11,9 @@
 <div class="container"><br><br>
     <div class="row">
         <div id="app">
-            <template v-if="!message">
-                <h1>Debes enviar un mensaje de ayuda</h1>
-                <p>Envia un mensaje inme..</p>
-                <p>Reina de corazones</p>
-            </template>
+
+                <h1 v-if="!message">Debes enviar un mensaje de ayuda</h1>
+                <h2 v-else>Haz enviado un mensaje</h2>
 
             <textarea class="form-control" v-model="message"></textarea><br>
             <button class="btn" v-show="message">Enviar mensaje de ayuda a los aliados</button>
