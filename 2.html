@@ -18,7 +18,7 @@
             </template>
 
             <textarea class="form-control" v-model="message"></textarea><br>
-            <button class="btn" v-if="message">Enviar mensaje de ayuda a los aliados</button>
+            <button class="btn" v-show="message">Enviar mensaje de ayuda a los aliados</button>
             <pre>
                 {{$data}}
             </pre>
