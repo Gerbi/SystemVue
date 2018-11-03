@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hola Vue</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="container"><br><br>
+    <div class="row">
+        <div id="app">
+            <h1 v-if="!message">Debes enviar un mensaje de ayuda</h1>
+            <textarea class="form-control" v-model="message"></textarea><br>
+            <button class="btn" v-if="message">Enviar mensaje de ayuda a los aliados</button>
+            <pre>
+                {{$data}}
+            </pre>
+        </div>
+    </div>
+
+</div>
+
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            message: 'Ayuda, estamos en peligro. Enviar ayuda'
+        }
+    })
+
+</script>
+</body>
+</html>
