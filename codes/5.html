@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Historias</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body>
+<div class="container"><br><br>
+    <div id="app">
+        <div>
+            <h1>Ahora algunas historias!</h1>
+            <ul class="list-group">
+                <li v-for="(story, index) in stories" class="list-group-item">
+                   {{index}}. {{story.writer}} dijo "{{story.plot}}"
+                </li>
+            </ul>
+        </div>
+
+        <pre>
+        {{$data}}
+    </pre>
+    </div>
+
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            stories: [
+                {
+                    plot: "Cuidare de mi mismo",
+                    writer: "Alex"
+                },
+                {
+                    plot: "esto es todo",
+                    writer: "Laura"
+                },
+                {
+                    plot: "Todo camino tiene un fin",
+                    writer: "John"
+                },
+                {
+                    plot: "Aun cuando solo es el inicio",
+                    writer: "Gomez"
+                }
+            ]
+        }
+    })
+
+</script>
+</body>
+</html>
