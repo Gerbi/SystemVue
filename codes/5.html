@@ -12,8 +12,8 @@
         <div>
             <h1>Ahora algunas historias!</h1>
             <ul class="list-group">
-                <li v-for="(story, index) in stories" class="list-group-item">
-                   {{index}}. {{story.writer}} dijo "{{story.plot}}"
+                <li v-for="(value, key, index) in story" class="list-group-item">
+                   {{index}} : {{key}} : {{value}}
                 </li>
             </ul>
         </div>
@@ -30,24 +30,26 @@
     new Vue({
         el: '#app',
         data: {
-            stories: [
+            story:
+                // [
                 {
                     plot: "Cuidare de mi mismo",
-                    writer: "Alex"
-                },
-                {
-                    plot: "esto es todo",
-                    writer: "Laura"
-                },
-                {
-                    plot: "Todo camino tiene un fin",
-                    writer: "John"
-                },
-                {
-                    plot: "Aun cuando solo es el inicio",
-                    writer: "Gomez"
+                    writer: "Alex",
+                    upvotes: 47
+                // },
+                // {
+                //     plot: "esto es todo",
+                //     writer: "Laura"
+                // },
+                // {
+                //     plot: "Todo camino tiene un fin",
+                //     writer: "John"
+                // },
+                // {
+                //     plot: "Aun cuando solo es el inicio",
+                //     writer: "Gomez"
                 }
-            ]
+            // ]
         }
     })
 
